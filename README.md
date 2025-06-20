@@ -1,8 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HTML Element Generator
+
+An interactive web application for creating and managing HTML elements with a modern UI and live preview capabilities.
+
+**Live Demo:** [https://element-generator.rehanqasim.com](https://element-generator.rehanqasim.com)
+
+This project is built with [Next.js](https://nextjs.org) and Tailwind CSS, providing a clean, responsive interface for generating HTML elements.
 
 ## Getting Started
 
-First, run the development server:
+### Option 1: Running Locally with Node.js
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/rehanqasimk/element-generator.git
+cd element-generator
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +35,96 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Option 2: Running with Docker
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository:
 
-## Learn More
+```bash
+git clone https://github.com/yourusername/element-generator.git
+cd element-generator
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Build the Docker image:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+docker build -t element-generator .
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Run the container:
 
-## Deploy on Vercel
+```bash
+docker run -p 3000:3000 element-generator
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to access the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Features
+
+- Interactive element creation with live preview
+- Support for multiple HTML elements (Input, Button, Textarea, Select, Div, etc.)
+- Dark/Light mode toggle
+- Export HTML code
+- Copy to clipboard functionality
+- Responsive design
+
+## Development
+
+You can customize the application by modifying the following files:
+
+- `src/app/page.tsx`: Main application page
+- `src/components/`: Contains all the component files
+- `src/components/elementUtils.ts`: Utility functions for elements
+
+## Deployment
+
+The application is currently deployed at:
+
+**[https://element-generator.rehanqasim.com](https://element-generator.rehanqasim.com)**
+
+### Deploying Your Own Version
+
+You can deploy this project using:
+
+1. **Vercel**: The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js.
+
+2. **Docker**: Use the included Dockerfile to build and deploy in a containerized environment.
+
+```bash
+# Build the image
+docker build -t element-generator .
+
+# Run the container
+docker run -p 3000:3000 element-generator
+```
+
+3. **Custom Server**: Build the application and serve it using a static file server or reverse proxy:
+
+```bash
+# Build the application
+npm run build
+
+# Start the production server
+npm start
+```
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Docker
+
+## Application Structure
+
+- **ElementSelector**: Component for selecting HTML element types from a dropdown
+- **ElementPreview**: Shows a live preview of the selected element with interactive capabilities
+- **ElementList**: Manages the list of added elements with editing and deletion functionality
+- **Header**: Contains the application title and branding
+- **elementUtils**: Utility functions and default content for different elements
+
+## License
+
+MIT

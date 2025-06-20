@@ -4,6 +4,8 @@ An interactive web application for creating and managing HTML elements with a mo
 
 **Live Demo:** [https://element-generator.rehanqasim.com](https://element-generator.rehanqasim.com)
 
+**Built with Love by Rehan Qasim** ❤️
+
 This project is built with [Next.js](https://nextjs.org) and Tailwind CSS, providing a clean, responsive interface for generating HTML elements.
 
 ## Getting Started

@@ -243,10 +243,15 @@ export default function Home() {
         
         {/* Footer */}
         <footer className={`mt-12 text-center text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-          <p className="flex items-center justify-center gap-1">
-            HTML Element Generator &copy; {new Date().getFullYear()}
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-indigo-500 ml-1"></span>
-          </p>
+          <div className="flex flex-col items-center space-y-2">
+            <p className="flex items-center justify-center gap-1">
+              HTML Element Generator &copy; {new Date().getFullYear()}
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-indigo-500 ml-1"></span>
+            </p>
+            <p className="flex items-center justify-center gap-1">
+              Built with <span className="text-red-500">❤️</span> by <a href="https://rehanqasim.com" target="_blank" rel="noopener noreferrer" className={`hover:underline ${isDarkMode ? 'text-indigo-300' : 'text-indigo-600'}`}>Rehan Qasim</a>
+            </p>
+          </div>
         </footer>
       </div>
     </div>
